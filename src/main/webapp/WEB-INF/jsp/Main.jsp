@@ -26,9 +26,9 @@
 
 <div class="container">
 
-</br> 
+<br> 
 
-</br>
+<br>
 
   <ul class="nav nav-tabs">
 
@@ -51,18 +51,35 @@
       <p>Hello world!</p>
 
     </div>
+     <script>
+    function check_sign_in() {
+    	if(form.id.value =="") {
+    		alert("값을 입력해 주세요.");
+    		form.id.focus();
+    		return false;
+    	}
+    	else if(form.pwd.value == "") {
+    		alert("값을 입력해 주세요.");
+    		form.pwd.focus();
+    		return false;
+    	}
+    	else
+    		return true;
+    }
+    </script>
 
     <div id="menu1" class="tab-pane fade">
 
       <h3>Sign in</h3>
 
-      <form action="/action_page.php">
+      <form method = "POST" name = "form" onsubmit = "return check_sign_in()" action="/login">
 
     <div class="form-group">
 
       <label for="ex3">ID:</label>
 
-      <input type="text" class="form-control" id="id" placeholder="Enter ID" type="text">
+      
+      <input type="text" class="form-control" id="id" placeholder="Enter ID" name="id">
 
     </div>
 
@@ -70,29 +87,56 @@
 
       <label for="pwd">Password:</label>
 
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="password" class="form-control" id="pw" placeholder="Enter password" name="pw">
 
  
 
     </div>
 
-    <button type="submit" class="btn btn-primary">Login</button>
+   <button type="submit" class="btn btn-basic">login</button>
 
   </form>
 
     </div>
+    
+    <script>
+    function check_sign_up() {
+    	if(fr.id.value =="") {
+    		alert("값을 입력해 주세요.");
+    		fr.id.focus();
+    		return false;
+    	}
+    	else if(fr.pwd.value == "") {
+    		alert("값을 입력해 주세요.");
+    		fr.pwd.focus();
+    		return false;
+    	}
+    	else if(fr.name.value =="") {
+    		alert("값을 입력해 주세요.");
+    		fr.name.value.focus();
+    		return false;
+    	}
+    	else if(fr.age.value == "") {
+    		alert("값을 입력해 주세요.");
+    		fr.age.value.focus();
+    		return false;
+    	}
+    	else
+    		return true;
+    }
+    </script>
 
     <div id="menu2" class="tab-pane fade">
 
       <h3>Sign up</h3>
 
-      <form action="/action_page.php">
+      <form method = "POST" name = "fr" onsubmit = "return check_sign_up()" action="/sign_up">
 
     <div class="form-group">
 
       <label for="ex3">ID:</label>
 
-      <input type="text" class="form-control" id="id" placeholder="Enter ID" type="text">
+      <input type="text" class="form-control" id="id2" placeholder="Enter ID" type="text" name = "id">
 
     </div>
 
@@ -100,7 +144,7 @@
 
       <label for="pwd">Password:</label>
 
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="password" class="form-control" id="pw2" placeholder="Enter password" name="pw">
 
     </div>
 
