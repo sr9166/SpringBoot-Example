@@ -1,5 +1,7 @@
 package com.example.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 
 public class User {
@@ -32,6 +34,5 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-
     
 }
