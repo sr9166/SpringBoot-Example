@@ -35,6 +35,7 @@ public class PrintController {
 	@Autowired
 	ImageController imageController;
 
+	// 리퀘스트 매핑
 	@RequestMapping(method = RequestMethod.GET, value="/")
     public String printview() {
         return "basic";
