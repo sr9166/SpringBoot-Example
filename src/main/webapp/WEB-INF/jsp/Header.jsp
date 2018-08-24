@@ -19,12 +19,14 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">WebSiteName</a>
+					<a class="navbar-brand" href="/">MAIN</a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li><a href="/">Home</a></li>
-					<li><a href="/">Page 1</a></li>
-					<li><a href="/">Page 2</a></li>
+					<li><a href="/item?category=top">TOP</a></li>
+					<li><a href="/item?category=bottom">BOTTOM</a></li>
+					<li><a href="/item?category=outer">OUTER</a></li>
+					<li><a href="/item?category=sneaker">SNEAKER</a></li>
+					<li><a href="/item?category=bag">BAG</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="/sign_up"><span
@@ -48,10 +50,10 @@
 						</c:otherwise>
 					</c:choose>
 				</ul>
-				<form class="navbar-form navbar-right" action="/action_page.php">
+				<form class="navbar-form navbar-right" action="/search">
 					<div class="input-group">
 						<input type="text" class="form-control input-sm" placeholder="Search"
-							name="search">
+							name="name">
 						<div class="input-group-btn">
 							<button class="btn btn-default" type="submit">
 								<span class="glyphicon glyphicon-search"></span>

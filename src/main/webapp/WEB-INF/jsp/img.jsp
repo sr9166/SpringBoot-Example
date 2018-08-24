@@ -7,18 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container" style="margin-top: 25px">
-		<p>
-				<span class="glyphicon glyphicon-map-marker"></span> Kyung Hee
-				University, Korea
-			</p>
-			<p>
-				<span class="glyphicon glyphicon-phone"></span> 010-2478-8401
-			</p>
-			<p>
-				<span class="glyphicon glyphicon-envelope"></span>
-				2014104133@khu.ac.kr
-			</p>
-	</div>
+<div class = "container text-center">
+<h2>File Name : ${image.name }</h2>
+<h2>File Price : ${image.price }¿ø</h2>
+<h2>File Category : ${image.category }</h2>
+<img src="data:image/jpg;base64,${image.encodedString}" ><p/>
+<h4><a href="/">BACK TO MAIN</a></h4>
+</div>
 </body>
 </html>
